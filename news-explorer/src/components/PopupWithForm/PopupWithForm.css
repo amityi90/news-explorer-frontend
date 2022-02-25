@@ -1,0 +1,129 @@
+.form__container {
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility .2s, opacity .2s linear;
+    box-sizing: border-box;
+}
+
+.form__container_close {
+    visibility: hidden;
+}
+
+.form {
+    position: relative;
+    width: 430px;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 34px 36px 28px;
+    box-sizing: border-box;
+}
+
+.form__close-button {
+    position: absolute;
+    margin: 0;
+    top: -40px;
+    right: -40px;
+    background-image: url(../../images/close.svg);
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    align-self: flex-end;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.form__title {
+    margin: 0 0 22px;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    color: #1A1B22;
+}
+
+.form__label {
+    font-family: Inter;
+    font-size: 12px;
+    line-height: 15px;
+    color: #2F71E5;
+    margin-bottom: 9px;
+}
+
+.form__input {
+    margin-bottom: 3px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.form__validator {
+    font-family: Inter;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+    margin-bottom: 13px;
+}
+
+.form__validator_of_username {
+    align-self: center;
+    margin: 14px 0 0;
+}
+
+.form__submit-button {
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: none;
+    color: white;
+    height: 64px;
+    background: #2F71E5;
+    border-radius: 100px;
+    display: block;
+    cursor: pointer;
+}
+
+.form__link-suggestion {
+    align-self: center;
+    margin: 16px 0 0;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.form__link {
+    color: #2F71E5;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+    .form {
+        padding: 16px;
+        width: 100%;
+        position: absolute;
+        top: 56px;
+        height: 100vh;
+    }
+
+    .form__close-button {
+        background-image: url(../../images/close-small.svg);
+        right: 16px;
+        z-index: 5;
+    }
+}

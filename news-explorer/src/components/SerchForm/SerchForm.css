@@ -1,0 +1,115 @@
+.search-form{
+    background-image: url(../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
+    padding: 160px 20px 56px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    max-height: 576px;
+    align-items: center;
+    background-size: cover;
+}
+
+.search-form__title {
+    max-width: 608px;
+    margin: 0 0 32px;
+    font-family: Roboto Slab;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 64px;
+    color: #FFFFFF;
+}
+
+.search-form__description {
+    max-width: 608px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.search-form__input-container {
+    width: 100%;
+    max-width: 608px;
+    display: flex;
+    margin: 68px 0 0;
+    justify-content: flex-end;
+}
+
+.search-form__input {
+    padding: 0 0 0 24px;    
+    width: 100%;
+    height: 64px;
+    border: 1px solid #D1D2D6;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+    border-radius: 100px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1A1B22;
+}
+
+.search-form__submit {
+    box-sizing: border-box;
+    position: absolute;
+    border: none;
+    color: white;
+    width: 168px;
+    height: 68px;
+    background: #2F71E5;
+    border-radius: 100px;
+    display: block;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.search-form__submit:hover {
+    background: #347EFF;
+}
+
+.search-form__submit:active {
+    background: #2A65CC;
+}
+
+@media screen and (max-width: 900px) {
+    .search-form{
+        padding: 104px 20px 48px;
+    }
+    
+    .search-form__title {
+        max-width: 448px;
+        margin: 0 0 16px;
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .search-form__description {
+        max-width: 448px;
+    }
+    
+    .search-form__input-container {
+        max-width: 448px;
+        margin: 24px 0 0;
+    }    
+}
+
+@media screen and (max-width: 550px) {
+    .search-form{
+        padding: 86px 16px 34px;
+    }
+    
+    .search-form__input-container {
+        max-width: 448px;
+        margin: 122px 0 0;
+        flex-direction: column;
+    }
+    
+    .search-form__submit {
+        position: initial;
+        width: 100%;
+        margin: 16px 0 0;
+    }
+}
