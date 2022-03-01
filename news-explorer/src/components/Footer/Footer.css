@@ -27,12 +27,16 @@
     text-align: center;
     color: #1A1B22;
     text-decoration: none;
+    transition: transform .1s;
+}
+
+.footer__link:hover {
+    transform: scale(1.04);
 }
 
 .footer__personal-links-container {
     display: flex;
     margin-left: 40px;
-
 }
 
 .footer__personal-link {
@@ -40,6 +44,11 @@
     height: 21px;
     background-repeat: no-repeat;
     background-position: center;
+    transition: transform .1s;
+}
+
+.footer__personal-link:hover {
+    transform: scale(1.1);
 }
 
 .footer__personal-link_to_github {

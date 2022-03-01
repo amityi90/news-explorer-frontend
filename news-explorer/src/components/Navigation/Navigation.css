@@ -27,6 +27,11 @@
     color: white;
     text-decoration: none;
     text-align: center;
+    transition: transform .1s;
+}
+
+.nav__item:hover {
+    transform: scale(1.04);
 }
 
 .nav__item_with_mark {
@@ -50,6 +55,11 @@
     font-size: 18px;
     line-height: 24px;
     cursor: pointer;
+    transition: transform .1s;
+}
+
+.nav__auth-button:hover {
+    transform: scale(1.04);
 }
 
 .nav__auth-button_logged-in {
@@ -160,7 +170,5 @@
     .nav__auth-button_theme_dark {
         color: white;
         border: 1px solid white;
-    }
-    
-    
+    }    
 }
