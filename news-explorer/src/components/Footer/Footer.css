@@ -47,8 +47,9 @@
     background-image: url(../../images/git-logo.svg);
 }
 
-.footer__personal-link_to_facebook {
-    background-image: url(../../images/facebook-logo.svg);
+.footer__personal-link_to_linkedin {
+    background-image: url(../../images/linkedin-logo-png-linked-in-icon.png);
+    background-size: contain;
 }
 
 @media screen and (max-width: 900px) {

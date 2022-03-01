@@ -77,7 +77,15 @@
         cursor: pointer;       
     }
 
+    .header__toggle-button_theme_dark {
+        background-image: url(../../images/menu-dark.svg);
+    }
+
     .header__toggle-button_symbol_close {
         background-image: url(../../images/close-menu.svg);
+    }    
+
+    .header_open {
+        color: white;
     }
 }
