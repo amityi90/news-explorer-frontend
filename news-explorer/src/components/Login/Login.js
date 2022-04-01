@@ -32,10 +32,6 @@ function Login(props) {
         resetForm();
     }
 
-    // React.useEffect(() => {
-    // }, [])
-
-
     return (
         <form
             className="form"
@@ -45,6 +41,7 @@ function Login(props) {
             <h2 className="form__title">{props.setTo}</h2>
             <label className="form__label">Email</label>
             <input className="form__input"
+                value={values.email || ''}
                 onChange={handleChange}
                 name="email"
                 placeholder="Enter email"
@@ -54,6 +51,7 @@ function Login(props) {
             <span className="form__validator">{errors["email"]}</span>
             <label className="form__label">Password</label>
             <input className="form__input"
+                value={values.password || ''}
                 onChange={handleChange}
                 name="password"
                 placeholder="Enter password"

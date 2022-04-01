@@ -1,4 +1,6 @@
 .nav {
+    margin: 0;
+    padding: 0;
     color: white;
     display: flex;
     z-index: 3;
@@ -10,6 +12,7 @@
 
 .nav__list {
     margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
 }
@@ -44,6 +47,8 @@
 }
 
 .nav__auth-button {
+    margin: 0;
+    padding: 0;
     color: white;
     background-color: transparent;
     height: 48px;
@@ -71,6 +76,8 @@
 }
 
 .nav__logout-icon {
+    margin: 0;
+    padding: 0;
     background: transparent;
     background-image: url(../../images/logout-icon-white.svg);
     width: 24px;

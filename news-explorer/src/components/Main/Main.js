@@ -3,7 +3,7 @@ import NewsCardList from "../NewsCardList/NewsCardList";
 import About from "../About/About";
 import getNews from '../../utils/NewsApi';
 import Preloader from "../Preloader/Preloader";
-import React, { useState } from 'react';
+import React from 'react';
 
 
 
@@ -23,7 +23,6 @@ function Main(props) {
                 if (data.status !== 'ok') {
                     setRenderNotFound(true);
                 } else {
-                    console.log(data);
                     setCardsList(data.articles);
                     localStorage.setItem('newsArticles', JSON.stringify(data.articles));
                     localStorage.setItem('keyword', keyword);
@@ -31,6 +30,9 @@ function Main(props) {
                     props.setRenderCards(true);
                 }
             })
+            .catch((err) => {
+                console.log(err);
+            });
     }
 
     React.useEffect(() => {

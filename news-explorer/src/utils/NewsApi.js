@@ -14,5 +14,10 @@ export default function getNews(keyword) {
         `apiKey=${apiKey}`;
 
     return fetch(url)
-        .then(response => response.json());
+        .then((response) => {
+            if (!response.ok) {
+                return Promise.reject(`Error: ${response.status}`);
+            }
+            return response.json();
+        });
 }

@@ -5,18 +5,18 @@ import Footer from '../Footer/Footer';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
 import NewsCardList from '../NewsCardList/NewsCardList';
+import Login from "../Login/Login";
+import Register from "../Register/Register";
+import RegistrationSuccessfullyPopup from "../RegistrationSuccessfullyPopup/RegistrationSuccessfullyPopup";
 import React, { useState } from 'react';
 import { CurrentUserContext } from '../../contexts/currentUserContext';
 import mainApi from '../../utils/MainApi';
 import sortKeywords from '../../utils/sortKeywords';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-import ReactDOM from "react-dom";
 import {
-  BrowserRouter,
   Routes,
   Route,
-  useNavigate,
-  Link
+  useNavigate
 } from "react-router-dom";
 
 function App() {
@@ -63,7 +63,6 @@ function App() {
   }
 
   function handleRegistration(registerDetails) {
-    console.log(registerDetails);
     mainApi.register(registerDetails)
       .then((res) => {
         if (!res) {
@@ -170,14 +169,15 @@ function App() {
           console.log(err);
         });
     }
-
   }
 
   React.useEffect(() => {
-    getUserInfo()
-      .then(() => {
-        getSavedArticles();
-      });
+    if (localStorage.getItem('JWT')) {
+      getUserInfo()
+        .then(() => {
+          getSavedArticles();
+        });
+    }
   }, [])
 
 
@@ -217,7 +217,10 @@ function App() {
             />
           </>} />
           <Route path="/saved-news" element={<>
-            <ProtectedRoute loggedIn={loggedIn}>
+            <ProtectedRoute
+              loggedIn={loggedIn}
+              openPopup={openPopup}
+            >
               <Header
                 closeMenu={closeMenu}
                 handleLogout={handleLogout}
@@ -248,7 +251,25 @@ function App() {
           setTo={popup}
           isOpen={isPopupOpen}
           changePopup={changePopup}
-        />
+        >
+          {
+            popup === "Sign up successfully" ?
+              <RegistrationSuccessfullyPopup changePopup={changePopup} /> :
+              popup === "Sign up" ?
+                <Register
+                  handleRegistration={handleRegistration}
+                  changePopup={changePopup}
+                  onClose={closePopup}
+                  setTo={popup}
+                /> :
+                popup === "Sign in" ? <Login
+                  handleLogin={handleLogin}
+                  changePopup={changePopup}
+                  onClose={closePopup}
+                  setTo={popup}
+                /> : ""
+          }
+        </PopupWithForm>
       </CurrentUserContext.Provider>
     </div>
   );
