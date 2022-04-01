@@ -26,3 +26,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+
+## link
+
+https://news-explorer-am.students.nomoreparties.sbs/
