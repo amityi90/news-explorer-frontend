@@ -5,7 +5,7 @@ export default function getNews(keyword) {
     const weekAgoDateSendFormat = `${weekAgoDate.getFullYear()}-${weekAgoDate.getMonth() + 1}-${weekAgoDate.getDate()}`;
     const apiKey = '72da70afb5f84c91928179f8f266e126';
 
-    const url = 'https://newsapi.org/v2/everything?' +
+    const url = 'https://nomoreparties.co/news/v2/top-headlines?' +
         `q=${keyword}&` +
         `from=${weekAgoDateSendFormat}&` +
         `to=${currentDateSendFormat}&` +
