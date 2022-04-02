@@ -1,4 +1,5 @@
 .footer {
+    margin: 0;
     position: relative;
     width: 100%;
     height: 80px;
@@ -10,36 +11,54 @@
 }
 
 .footer__copyright {
+    margin: 0;
+    padding: 0;
     font-size: 16px;
     line-height: 22px;
     color: #B6BCBF;
 }
 
 .footer__navigator {
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
 }
 
 .footer__link {
+    margin: 0;
     padding: 0 20px;
     font-size: 18px;
     line-height: 24px;
     text-align: center;
     color: #1A1B22;
     text-decoration: none;
+    transition: transform .1s;
+}
+
+.footer__link:hover {
+    transform: scale(1.04);
 }
 
 .footer__personal-links-container {
+    margin: 0;
+    padding: 0;
     display: flex;
     margin-left: 40px;
-
 }
 
 .footer__personal-link {
+    margin: 0;
+    padding: 0;
     width: 21px;
     height: 21px;
     background-repeat: no-repeat;
     background-position: center;
+    transition: transform .1s;
+}
+
+.footer__personal-link:hover {
+    transform: scale(1.1);
 }
 
 .footer__personal-link_to_github {
@@ -47,8 +66,9 @@
     background-image: url(../../images/git-logo.svg);
 }
 
-.footer__personal-link_to_facebook {
-    background-image: url(../../images/facebook-logo.svg);
+.footer__personal-link_to_linkedin {
+    background-image: url(../../images/linkedin-logo-png-linked-in-icon.png);
+    background-size: contain;
 }
 
 @media screen and (max-width: 900px) {
@@ -88,7 +108,5 @@
         padding: 0;
         font-size: 18px;
         line-height: 48px;    
-    }
-
-    
+    }    
 }

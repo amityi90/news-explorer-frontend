@@ -1,11 +1,14 @@
 .news-card {
+    display: block;
     max-width: 400px;
     max-height: 576px;
     background: white;
     border-radius: 10px;
+    text-decoration: none;
 }
 
 .news-card__image-container {
+    position: relative;
     padding: 24px 24px 52%;
     border-radius: 10px 10px 0 0;
     display: flex;
@@ -29,6 +32,7 @@
 
 .news-card__topic {
     font-size: 14px;
+    color: black;
 }
 
 .news-card__item_hidden {
@@ -45,6 +49,7 @@
     margin-right: 5px;
     visibility: hidden;
     align-self: flex-start;
+    color: black;
 }
 
 .news-card__button {
@@ -67,12 +72,24 @@
     visibility: visible;
 }
 
+.news-card__button-description:hover {
+    visibility: hidden; 
+}
+
 .news-card__button_save {
     background-image: url(../../images/bookmark.svg);
 }
 
 .news-card__button_save:hover {
     background-image: url(../../images/bookmark-hover.svg);
+}
+
+.news-card__button_save_is-saved {
+    background-image: url(../../images/bookmark-marked.png);
+}
+
+.news-card__button_save_is-saved:hover {
+    background-image: url(../../images/bookmark-marked.png);
 }
 
 .news-card__content-container {

@@ -8,8 +8,8 @@ function Footer() {
                 <Link to="/" className="footer__link">Home</Link>
                 <a className="footer__link" href="https://practicum.yandex.com">Practicum by Yandex</a>
                 <div className="footer__personal-links-container">
-                    <a className="footer__personal-link footer__personal-link_to_github" href="https://github.com/amityi90"/>
-                    <a className="footer__personal-link footer__personal-link_to_facebook" />
+                    <a className="footer__personal-link footer__personal-link_to_github" href="https://github.com/amityi90" />
+                    <a className="footer__personal-link footer__personal-link_to_linkedin" href="https://www.linkedin.com/in/amit-mottes-a909b021b/" />
                 </div>
             </nav>
         </footer>

@@ -1,4 +1,6 @@
 .nav {
+    margin: 0;
+    padding: 0;
     color: white;
     display: flex;
     z-index: 3;
@@ -10,6 +12,7 @@
 
 .nav__list {
     margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
 }
@@ -26,6 +29,12 @@
     box-sizing: border-box;
     color: white;
     text-decoration: none;
+    text-align: center;
+    transition: transform .1s;
+}
+
+.nav__item:hover {
+    transform: scale(1.04);
 }
 
 .nav__item_with_mark {
@@ -38,6 +47,8 @@
 }
 
 .nav__auth-button {
+    margin: 0;
+    padding: 0;
     color: white;
     background-color: transparent;
     height: 48px;
@@ -49,6 +60,35 @@
     font-size: 18px;
     line-height: 24px;
     cursor: pointer;
+    transition: transform .1s;
+}
+
+.nav__auth-button:hover {
+    transform: scale(1.04);
+}
+
+.nav__auth-button_logged-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: fit-content;
+}
+
+.nav__logout-icon {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    background-image: url(../../images/logout-icon-white.svg);
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 15px;
+}
+
+.nav__logout-icon_dark {
+    background-image: url(../../images/logout-icon-black.svg);
 }
 
 .nav__auth-button_theme_dark {
@@ -67,7 +107,11 @@
         height: 40px;
         width: 152px;
         font-size: 16px;
-    }  
+    }
+
+    .nav__auth-button_logged-in {
+        width: fit-content;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -106,9 +150,32 @@
         height: 56px;
     }
 
+    .nav__auth-button_logged-in {
+        align-self: flex-start;
+        width: auto;
+        justify-content: flex-start;
+        margin-left: 16px;
+    }
+
     .nav_enable {
         display: flex;
     }
+
+    .nav_theme_dark {
+        color: white;
+    }
+
+    .nav__item_theme_dark {
+        color: white;
+        border-color: white;
+    }
+
+    .nav__logout-icon_dark {
+        background-image: url(../../images/logout-icon-white.svg);
+    }
     
-    
+    .nav__auth-button_theme_dark {
+        color: white;
+        border: 1px solid white;
+    }    
 }
