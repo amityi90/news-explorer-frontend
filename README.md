@@ -1,12 +1,12 @@
 # news-explorer
 
 
+
 ## description
-Here you can search news by topics.
-
+ Here you can search for news articles dy topics and saving theme after creating an account. Happt reading!
+ 
 ## technologies
-JavaScript, CSS, React, React Router.
-
+ HTML CSS BEM JavaScript React ...
 
 ### `npm start`
 
@@ -29,4 +29,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## link
 
-https://news-explorer-am.students.nomoreparties.sbs/
+server is shut down, you can watch the website on gh-pages without the features that using the server. https://amityi90.github.io/news-explorer-frontend-deploy/
