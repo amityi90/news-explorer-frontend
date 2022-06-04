@@ -1,32 +1,35 @@
 # news-explorer
 
+**Description:**
 
+Here you can search news by topic and save articles from all around the world.
 
-## description
- Here you can search for news articles dy topics and saving theme after creating an account. Happt reading!
- 
-## technologies
- HTML CSS BEM JavaScript React ...
+![news-explorer-screen](https://user-images.githubusercontent.com/58591435/172022820-29c9839f-4620-47a9-9058-ff13626640d8.png)
 
-### `npm start`
+**Technologies:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+i have useud:
+BEM methodology
+adapting to defferent devices
+form
+javaScript
+DOM
+oop
+webpack
+React
+React router
+Node.js
+Express.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**How To Run:**
 
-### `npm run build`
+run the command: "npm start" in the news-explorer directory.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**How to Use:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Enter a topic and search. For saving articles you must create an account.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Link:**
 
-
-## link
-
-server is shut down, you can watch the website on gh-pages without the features that using the server. https://amityi90.github.io/news-explorer-frontend-deploy/
+https://amityi90.github.io/news-explorer-frontend-deploy/
+(the server is shut down so there is not registration and save article functionality)
